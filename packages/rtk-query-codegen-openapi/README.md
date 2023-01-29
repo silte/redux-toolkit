@@ -1,3 +1,5 @@
+# note: This is fork of [reduxjs/redux-toolkit](https://github.com/reduxjs/redux-toolkit) with changes by [labmorales](https://github.com/labmorales/redux-toolkit/tree/feat/add_ts_enums_rtk). Only purpose of this fork is to publish customized npm module with these changes which allow user to generate output with ts enums.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/rtk-incubator/rtk-query/main/logo.png" width="400" />
 </p>
