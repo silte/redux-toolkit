@@ -6,13 +6,13 @@ import ApiGenerator, {
   getReferenceName,
   isReference,
   supportDeepObjects,
-} from 'oazapfts/lib/codegen/generate';
+} from '@silte/oazapfts/lib/codegen/generate';
 import {
   createQuestionToken,
   keywordType,
   createPropertyAssignment,
   isValidIdentifier,
-} from 'oazapfts/lib/codegen/tscodegen';
+} from '@silte/oazapfts/lib/codegen/tscodegen';
 import type { OpenAPIV3 } from 'openapi-types';
 import { generateReactHooks } from './generators/react-hooks';
 import type { EndpointMatcher, EndpointOverrides, GenerationOptions, OperationDefinition, TextMatcher } from './types';
@@ -91,6 +91,7 @@ export async function generateApi(
     filterEndpoints,
     endpointOverrides,
     unionUndefined,
+    enumNameSuffix,
     flattenArg = false,
     useEnumType = false,
   }: GenerationOptions
@@ -100,6 +101,7 @@ export async function generateApi(
   const apiGen = new ApiGenerator(v3Doc, {
     unionUndefined,
     useEnumType,
+    enumNameSuffix
   });
 
   const operationDefinitions = getOperationDefinitions(v3Doc).filter(operationMatches(filterEndpoints));
