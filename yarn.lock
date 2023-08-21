@@ -6832,21 +6832,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@silte/oazapfts@npm:^4.5.2":
-  version: 4.5.2
-  resolution: "@silte/oazapfts@npm:4.5.2"
-  dependencies:
-    "@apidevtools/swagger-parser": ^10.1.0
-    lodash: ^4.17.21
-    minimist: ^1.2.7
-    swagger2openapi: ^7.0.8
-    typescript: ^4.9.3
-  bin:
-    oazapfts: lib/codegen/cli.js
-  checksum: 3d87638c7466b2125376d8dbe76d96e3c39f780ec4da71aad3c33c5eb2e5006a782927638e48413eb850f108c87f45f21129e32d04d1e9a11177bfe12bccea88
-  languageName: node
-  linkType: hard
-
 "@silte/rtk-codegen-openapi@workspace:packages/rtk-query-codegen-openapi":
   version: 0.0.0-use.local
   resolution: "@silte/rtk-codegen-openapi@workspace:packages/rtk-query-codegen-openapi"
@@ -6856,7 +6841,6 @@ __metadata:
     "@babel/preset-env": ^7.12.11
     "@babel/preset-typescript": ^7.12.7
     "@reduxjs/toolkit": ^1.6.0
-    "@silte/oazapfts": ^4.5.2
     "@types/commander": ^2.12.2
     "@types/glob-to-regexp": ^0.4.0
     "@types/jest": ^27
@@ -6873,6 +6857,7 @@ __metadata:
     husky: ^4.3.6
     jest: ^27
     msw: ^0.40.2
+    oazapfts: ^4.7.5
     openapi-types: ^9.1.0
     prettier: ^2.2.1
     pretty-quick: ^3.1.0
@@ -19771,10 +19756,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.7":
-  version: 1.2.7
-  resolution: "minimist@npm:1.2.7"
-  checksum: 7346574a1038ca23c32e02252f603801f09384dd1d78b69a943a4e8c2c28730b80e96193882d3d3b22a063445f460e48316b29b8a25addca2d7e5e8f75478bec
+"minimist@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "minimist@npm:1.2.8"
+  checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
   languageName: node
   linkType: hard
 
@@ -20497,6 +20482,21 @@ fsevents@^1.2.7:
     should: ^13.2.1
     yaml: ^1.10.0
   checksum: 9f4c27022f961ca60472a9094803f347e986f7fb9f0dd12e14bafe5dcfdb677f7108a90dc01934af167e7cf27d78ac06b9cb63ecdd9cb5d8f532a0cf83242df9
+  languageName: node
+  linkType: hard
+
+"oazapfts@npm:^4.7.5":
+  version: 4.7.5
+  resolution: "oazapfts@npm:4.7.5"
+  dependencies:
+    "@apidevtools/swagger-parser": ^10.1.0
+    lodash: ^4.17.21
+    minimist: ^1.2.8
+    swagger2openapi: ^7.0.8
+    typescript: ^5.0.4
+  bin:
+    oazapfts: lib/codegen/cli.js
+  checksum: e1df966ec83f34d2a75995209613350941d4fca447100aac23a5c80a26da05b4b92d2769781e74df99ae2b098a691ae4d768b396ec129d459631b7f9ae7f74e2
   languageName: node
   linkType: hard
 
@@ -27139,12 +27139,22 @@ fsevents@^1.2.7:
   linkType: hard
 
 "typescript@npm:^4.9.3":
-  version: 4.9.4
-  resolution: "typescript@npm:4.9.4"
+  version: 4.9.5
+  resolution: "typescript@npm:4.9.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e782fb9e0031cb258a80000f6c13530288c6d63f1177ed43f770533fdc15740d271554cdae86701c1dd2c83b082cea808b07e97fd68b38a172a83dbf9e0d0ef9
+  checksum: ee000bc26848147ad423b581bd250075662a354d84f0e06eb76d3b892328d8d4440b7487b5a83e851b12b255f55d71835b008a66cbf8f255a11e4400159237db
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^5.0.4":
+  version: 5.1.6
+  resolution: "typescript@npm:5.1.6"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: b2f2c35096035fe1f5facd1e38922ccb8558996331405eb00a5111cc948b2e733163cc22fab5db46992aba7dd520fff637f2c1df4996ff0e134e77d3249a7350
   languageName: node
   linkType: hard
 
@@ -27199,12 +27209,22 @@ fsevents@^1.2.7:
   linkType: hard
 
 "typescript@patch:typescript@^4.9.3#~builtin<compat/typescript>":
-  version: 4.9.4
-  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=701156"
+  version: 4.9.5
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 37f6e2c3c5e2aa5934b85b0fddbf32eeac8b1bacf3a5b51d01946936d03f5377fe86255d4e5a4ae628fd0cd553386355ad362c57f13b4635064400f3e8e05b9d
+  checksum: 2eee5c37cad4390385db5db5a8e81470e42e8f1401b0358d7390095d6f681b410f2c4a0c496c6ff9ebd775423c7785cdace7bcdad76c7bee283df3d9718c0f20
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
+  version: 5.1.6
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=701156"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 21e88b0a0c0226f9cb9fd25b9626fb05b4c0f3fddac521844a13e1f30beb8f14e90bd409a9ac43c812c5946d714d6e0dee12d5d02dfc1c562c5aacfa1f49b606
   languageName: node
   linkType: hard
 
