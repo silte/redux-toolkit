@@ -152,7 +152,11 @@ export async function generateApi(
           ),
         }),
         factory.createExportDeclaration(
-          undefined,
+          // undefined,
+          // This impelmentation doesn't has the decorators parameter.
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3694 <-- it is using this one
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8144
+
           undefined,
           false,
           factory.createNamedExports([
@@ -245,7 +249,11 @@ export async function generateApi(
     const ResponseTypeName = factory.createTypeReferenceNode(
       registerInterface(
         factory.createTypeAliasDeclaration(
-          undefined,
+          // undefined,
+          // This impelmentation doesn't has the decorators parameter.
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3660 <-- it is using this one
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8096
+
           [factory.createModifier(ts.SyntaxKind.ExportKeyword)],
           capitalize(operationName + responseSuffix),
           undefined,
@@ -312,7 +320,11 @@ export async function generateApi(
     const QueryArg = factory.createTypeReferenceNode(
       registerInterface(
         factory.createTypeAliasDeclaration(
-          undefined,
+          // undefined,
+          // This impelmentation doesn't has the decorators parameter.
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3660 <-- it is using this one
+          // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8096
+
           [factory.createModifier(ts.SyntaxKind.ExportKeyword)],
           capitalize(operationName + argSuffix),
           undefined,
@@ -396,7 +408,10 @@ export async function generateApi(
       Object.keys(queryArg).length
         ? [
             factory.createParameterDeclaration(
-              undefined,
+              // undefined, 
+              // This impelmentation doesn't has the decorators parameter.
+              // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3457 <-- it is using this one
+              // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8000
               undefined,
               undefined,
               rootObject,

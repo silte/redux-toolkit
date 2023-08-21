@@ -12,7 +12,10 @@ export function generateObjectProperties(obj: ObjectPropertyDefinitions) {
 
 export function generateImportNode(pkg: string, namedImports: Record<string, string>, defaultImportName?: string) {
   return factory.createImportDeclaration(
-    undefined,
+    // undefined,
+    // This impelmentation doesn't has the decorators parameter.
+    // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3674 <-- it is using this one
+    // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8128
     undefined,
     factory.createImportClause(
       false,
@@ -46,7 +49,10 @@ export function generateCreateApiCall({
         undefined,
         [
           factory.createParameterDeclaration(
-            undefined,
+            // undefined, 
+            // This impelmentation doesn't has the decorators parameter.
+            // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L3457 <-- it is using this one
+            // https://github.com/microsoft/TypeScript/blob/v4.9.5/lib/typescript.d.ts#L8000
             undefined,
             undefined,
             endpointBuilder,
