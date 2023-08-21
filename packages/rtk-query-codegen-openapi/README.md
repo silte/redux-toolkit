@@ -1,5 +1,7 @@
 # note: This is fork of [reduxjs/redux-toolkit](https://github.com/reduxjs/redux-toolkit) with changes by [labmorales](https://github.com/labmorales/redux-toolkit/tree/feat/add_ts_enums_rtk). And some custom mods to make enums work when you use refs.
 
+## note2: Version 1.0.3 has breaking change in code generation. It removes enumNameSuffix, so now enum as generated as `enumName` instead of `enumNameEnum`.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/rtk-incubator/rtk-query/main/logo.png" width="400" />
 </p>
